@@ -9,7 +9,10 @@ const BookSchema = new Schema({
     type: "string",
     required: true,
   },
-
+  genre: {
+    type: "string",
+    required: true,
+  },
   description: {
     type: "string",
     required: true,
@@ -24,7 +27,7 @@ const BookSchema = new Schema({
   },
 
   publishDate: {
-    type: Date,
+    type: "string",
     required: true,
   },
   photo: {
@@ -32,5 +35,5 @@ const BookSchema = new Schema({
     required: true,
   },
 });
-const Book = mongoose.model("Book", BookSchema);
-module.exports = Book;
+const book = mongoose.model("Book", BookSchema);
+module.exports = book;

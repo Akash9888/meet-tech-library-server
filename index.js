@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(cors());
 
-//available route
+app.use("/api/books", require("./routes/bookRoutes"));
 
 app.listen(port, () => {
   console.log(`meet-tech library listening at http://localhost:${port}`);
